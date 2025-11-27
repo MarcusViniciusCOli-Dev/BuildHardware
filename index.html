@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Montagem de PC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Simulador de Montagem de PC</h1>
+
+    <div class="container">
+        <div class="card">
+            <form id="pcForm">
+                <div>
+                    <label>Processador</label>
+                    <select id="processador">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Placa-Mãe</label>
+                    <select id="placaMae">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Memória RAM</label>
+                    <select id="ram">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Armazenamento</label>
+                    <select id="armazenamento">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Placa de Vídeo</label>
+                    <select id="gpu">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Fonte</label>
+                    <select id="fonte">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Gabinete/Cooler</label>
+                    <select id="gabinete">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Monitor</label>
+                    <select id="monitor">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Teclado/Mouse</label>
+                    <select id="periferico">
+                        <option value="" disabled selected>Selecione</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="calcular">Calcular Desempenho</button>
+                    <button type="button" id="resetar">Iniciar Nova Montagem</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card pc-preview">
+            <h2 class="title-card">Pré-visualização</h2>
+            <div class="pc-shape"></div>
+
+            <div class="stats">
+                <div class="stat-label">Multitarefa</div>
+                <div class="bar">
+                    <div class="fill" id="barMulti"></div>
+                </div>
+
+                <div class="stat-label">Refrigeração</div>
+                <div class="bar">
+                    <div class="fill" id="barRefri"></div>
+                </div>
+
+                <div class="stat-label">Potência</div>
+                <div class="bar">
+                    <div class="fill" id="barPower"></div>
+                </div>
+
+                <div class="stat-label">Qualidade de Vídeo</div>
+                <div class="bar">
+                    <div class="fill" id="barVideo"></div>
+                </div>
+
+                <div class="stat-label">Armazenamento</div>
+                <div class="bar">
+                    <div class="fill" id="barStorage"></div>
+                </div>
+            </div>
+
+            <div class="price" id="precoTotal">Preço Total: R$ 0</div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
